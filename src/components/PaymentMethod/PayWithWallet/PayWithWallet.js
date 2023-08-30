@@ -13,7 +13,11 @@ import { MdOutlineClose } from "react-icons/md";
 import DropDown from "../../DropDown/DropDown";
 import styles from "./PayWithWallet.module.css";
 
-const PayWithWallet = ({ setModal, setShowScanWithQrCodeModal }) => {
+const PayWithWallet = ({
+  setModal,
+  setShowScanWithQrCodeModal,
+  setPaymentSuccessFull,
+}) => {
   const [showNetworks, setShowNetworks] = useState(false);
   const [showCoins, setShowCoins] = useState(false);
   const [taxInfo, setTaxInfo] = useState("");
@@ -82,7 +86,13 @@ const PayWithWallet = ({ setModal, setShowScanWithQrCodeModal }) => {
           className={styles.input}
         />
       </div>
-      <button className={styles.button}>
+      <button
+        className={styles.button}
+        onClick={() => {
+          setPaymentSuccessFull(true);
+          setModal(false);
+        }}
+      >
         Pay {(13685).toLocaleString()} USDC
       </button>
       <div

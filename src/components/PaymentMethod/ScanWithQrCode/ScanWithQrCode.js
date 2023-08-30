@@ -17,6 +17,7 @@ import styles from "./ScanWithQrCode.module.css";
 const ScanWithQrCode = ({ setModal }) => {
   const [showNetworks, setShowNetworks] = useState(false);
   const [showCoins, setShowCoins] = useState(false);
+  const [copy, setCopy] = useState(false);
 
   const networks = [
     { icon: polygon, name: "Polygon" },
@@ -61,10 +62,16 @@ const ScanWithQrCode = ({ setModal }) => {
       </div>
       <img src={qrCode} alt="#" className={styles.qrCode} />
       <div className={styles.infoContainer}>
-        <p className={[styles.address, styles.copy].join(" ")}>
+        <p className={[styles.address, copy && styles.copy].join(" ")}>
           0x14f4895Aa65b5DF634f8B75893c3e7ba2BbBB093
           <CopyToClipboard text="0x14f4895Aa65b5DF634f8B75893c3e7ba2BbBB093">
-            <BsFillClipboard2Fill className={styles.pasteIcon} />
+            <BsFillClipboard2Fill
+              className={styles.pasteIcon}
+              onClick={() => {
+                setCopy(true);
+                setTimeout(() => setCopy(false), 300);
+              }}
+            />
           </CopyToClipboard>
         </p>
         <p className={styles.text}>

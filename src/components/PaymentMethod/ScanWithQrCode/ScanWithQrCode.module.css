@@ -68,6 +68,17 @@
   justify-content: center;
   gap: 5px;
   word-break: break-all;
+  position: relative;
+}
+.copy::after {
+  content: "Copy";
+  font-size: 12px;
+  position: absolute;
+  right: 25px;
+  top: 5px;
+  background: #d3d4d9;
+  padding: 3px 5px;
+  border-radius: 4px;
 }
 .pasteIcon {
   color: rgba(145, 153, 170, 1);

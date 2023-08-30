@@ -19,10 +19,12 @@ import {
 import Modal from "../Modal/Modal";
 import PayWithWallet from "./PayWithWallet/PayWithWallet";
 import ScanWithQrCode from "./ScanWithQrCode/ScanWithQrCode";
+import PaymentSuccesFull from "./PaymentSuccessFull/PaymentSuccesFull";
 
 const PaymentMethod = () => {
   const [showPayWithWalletModal, setShowWithWalletModal] = useState(false);
   const [showScanWithQrCodeModal, setShowScanWithQrCodeModal] = useState(false);
+  const [paymentSuccessFullModal, setPaymentSuccessFullModal] = useState(false);
   return (
     <>
       <section className={styles.container}>
@@ -107,12 +109,18 @@ const PaymentMethod = () => {
           <PayWithWallet
             setModal={setShowWithWalletModal}
             setShowScanWithQrCodeModal={setShowScanWithQrCodeModal}
+            setPaymentSuccessFull={setPaymentSuccessFullModal}
           />
         </Modal>
       )}{" "}
       {showScanWithQrCodeModal && (
         <Modal setModal={setShowScanWithQrCodeModal}>
           <ScanWithQrCode setModal={setShowScanWithQrCodeModal} />
+        </Modal>
+      )}{" "}
+      {paymentSuccessFullModal && (
+        <Modal setModal={setPaymentSuccessFullModal}>
+          <PaymentSuccesFull setModal={setPaymentSuccessFullModal} />
         </Modal>
       )}
     </>

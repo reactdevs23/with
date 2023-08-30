@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Modal.module.css";
 
-const Modal = ({ setModal, children }) => {
+const Modal = ({ setModal, children, maxWidth }) => {
   return (
     <>
       <div className={styles.modal}>{children}</div>

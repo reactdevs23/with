@@ -1,0 +1,163 @@
+.wrapper {
+  border-radius: 12px;
+  border: 1px solid #cfd1d3;
+  background: #fff;
+  box-shadow: 1px 0px 30px -8px rgba(0, 0, 0, 0.25);
+  max-width: 489px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 24px;
+  padding-top: 45px;
+  position: relative;
+}
+.close {
+  font-size: 24px;
+  margin-left: auto;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  cursor: pointer;
+}
+
+.title {
+  color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 127.023%; /* 30.485px */
+  letter-spacing: 0.24px;
+  text-align: center;
+}
+
+.tagline {
+  color: #828b9b;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 137.523%;
+  letter-spacing: 0.4px;
+  padding-top: 12px;
+  padding-bottom: 24px;
+}
+.amountContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.amountContainer::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 100%;
+  height: 2px;
+  background: #f1f5fb;
+}
+.amount {
+  color: #828b9b;
+  font-family: Inter;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 137.523%; /* 26.129px */
+  letter-spacing: -1.425px;
+  border-radius: 16.5px;
+  background: #f1f5fb;
+  padding: 5px 12px;
+  z-index: 2;
+  position: relative;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 0;
+}
+.spaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text {
+  color: #828b9b;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 137.523%; /* 22.004px */
+  letter-spacing: 0.4px;
+}
+.buttonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  border-top: 2px solid #f1f5fb;
+  padding: 18px 0px;
+  width: 100%;
+}
+.button {
+  color: #7034fb;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 127.023%; /* 30.485px */
+  letter-spacing: -0.72px;
+  text-align: center;
+  border-radius: 12px;
+  background: #f1f2f6;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #f1f2f6;
+}
+.activeButton {
+  color: #fff;
+  background: #632cf6;
+  border: 2px solid #632cf6;
+}
+@media only screen and (max-width: 575px) {
+  .wrapper {
+    padding: 18px;
+    padding-top: 45px;
+  }
+  .close {
+    right: 10px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .buttonContainer {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .amount {
+    font-size: 17px;
+  }
+  .text {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .title {
+    font-size: 20px;
+  }
+  .amount {
+    font-size: 15px;
+  }
+  .text {
+    font-size: 12px;
+  }
+}
