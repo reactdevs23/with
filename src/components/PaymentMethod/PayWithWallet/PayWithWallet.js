@@ -87,7 +87,10 @@ const PayWithWallet = ({ setModal, setShowScanWithQrCodeModal }) => {
       </button>
       <div
         className={styles.scanWithQrCode}
-        onClick={() => setShowScanWithQrCodeModal(true)}
+        onClick={() => {
+          setShowScanWithQrCodeModal(true);
+          setModal(false);
+        }}
       >
         <img src={scanQrCode} alt="#" className={styles.qrCode} />
         <p className={styles.payWithQrCode}>Pay with OR Code</p>

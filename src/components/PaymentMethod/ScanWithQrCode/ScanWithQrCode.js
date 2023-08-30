@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { BsFillClipboard2Fill } from "react-icons/bs";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 import {
   ethereum,
   polygon,
@@ -60,9 +61,11 @@ const ScanWithQrCode = ({ setModal }) => {
       </div>
       <img src={qrCode} alt="#" className={styles.qrCode} />
       <div className={styles.infoContainer}>
-        <p className={styles.address}>
+        <p className={[styles.address, styles.copy].join(" ")}>
           0x14f4895Aa65b5DF634f8B75893c3e7ba2BbBB093
-          <BsFillClipboard2Fill className={styles.pasteIcon} />
+          <CopyToClipboard text="0x14f4895Aa65b5DF634f8B75893c3e7ba2BbBB093">
+            <BsFillClipboard2Fill className={styles.pasteIcon} />
+          </CopyToClipboard>
         </p>
         <p className={styles.text}>
           {" "}
