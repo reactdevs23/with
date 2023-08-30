@@ -18,14 +18,16 @@ const PayWithWallet = ({ setModal }) => {
   const [showCoins, setShowCoins] = useState(false);
   const [taxInfo, setTaxInfo] = useState("");
   const networks = [
-    { icon: ethereum, name: "USDC" },
-    { icon: usdc, name: "USDC" },
-    { icon: usdt, name: "USDT" },
     { icon: polygon, name: "Polygon" },
+    { icon: usdc, name: "USDC" },
+
+    { icon: ethereum, name: "Ethereum" },
+    { icon: usdt, name: "USDT" },
   ];
   const coins = [
-    { icon: ethereum, name: "USDC" },
     { icon: usdc, name: "USDC" },
+    { icon: ethereum, name: "Ethereum" },
+
     { icon: usdt, name: "USDT" },
     { icon: polygon, name: "Polygon" },
   ];
