@@ -119,6 +119,9 @@
   }
 }
 @media only screen and (max-width: 575px) {
+  .container {
+    min-height: auto;
+  }
   .nameAndIcon {
     gap: 8px;
   }
