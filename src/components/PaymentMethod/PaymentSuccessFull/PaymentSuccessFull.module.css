@@ -140,8 +140,9 @@
   .buttonContainer {
     grid-template-columns: 1fr;
   }
-  .title {
-    font-size: 22px;
+
+  .tagline {
+    font-size: 15px;
   }
   .amount {
     font-size: 17px;
