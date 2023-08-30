@@ -104,7 +104,10 @@ const PaymentMethod = () => {
       </section>
       {showPayWithWalletModal && (
         <Modal setModal={setShowWithWalletModal}>
-          <PayWithWallet setModal={setShowWithWalletModal} />
+          <PayWithWallet
+            setModal={setShowWithWalletModal}
+            setShowScanWithQrCodeModal={setShowScanWithQrCodeModal}
+          />
         </Modal>
       )}{" "}
       {showScanWithQrCodeModal && (
