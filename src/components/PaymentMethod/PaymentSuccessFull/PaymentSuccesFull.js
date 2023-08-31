@@ -1,10 +1,13 @@
 import React from "react";
+import { GiCheckMark } from "react-icons/gi";
 import { MdOutlineClose } from "react-icons/md";
 import styles from "./PaymentSuccessFull.module.css";
 const PaymentSuccesFull = ({ setModal }) => {
   return (
     <div className={styles.wrapper}>
-      {" "}
+      <div className={styles.success}>
+        <GiCheckMark className={styles.checkmark} />
+      </div>
       <MdOutlineClose
         className={styles.close}
         onClick={() => setModal(false)}

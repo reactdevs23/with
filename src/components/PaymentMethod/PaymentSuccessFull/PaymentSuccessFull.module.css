@@ -10,6 +10,24 @@
   padding-top: 45px;
   position: relative;
 }
+.success {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00a34e;
+  border: 2px solid #028641;
+}
+.checkmark {
+  color: rgba(255, 255, 255, 1);
+  font-size: 22px;
+}
 .close {
   font-size: 24px;
   margin-left: auto;
@@ -137,6 +155,13 @@
   }
 }
 @media only screen and (max-width: 450px) {
+  .success {
+    width: 40px;
+    height: 40px;
+  }
+  .checkmark {
+    font-size: 18px;
+  }
   .buttonContainer {
     grid-template-columns: 1fr;
   }
